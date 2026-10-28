@@ -41,18 +41,18 @@ def llama_preco(coin, inicio="2017-01-01"):
 def llama_tvl_chain(chain):
     r = requests.get(f"https://api.llama.fi/v2/historicalChainTvl/{chain}", timeout=60, headers=HDR); r.raise_for_status()
     d = pd.DataFrame(r.json()); d["data"] = pd.to_datetime(d["date"], unit="s").dt.strftime("%Y-%m-%d")
-    return d.rename(columns={"tvl": "tvl_chain_usd"})[["data", "tvl_chain_usd"]]
+    return d.rename(columns={"tvl": "tvl_chain_usd"})[["data", "tvl_chain_usd"]].drop_duplicates("data", keep="last")
 
 def llama_stables_chain(chain):
     r = requests.get(f"https://stablecoins.llama.fi/stablecoincharts/{chain}", timeout=60, headers=HDR); r.raise_for_status()
     d = pd.DataFrame([{"data": pd.to_datetime(int(x["date"]), unit="s").strftime("%Y-%m-%d"),
                        "stablecoins_usd": (x.get("totalCirculatingUSD") or {}).get("peggedUSD")} for x in r.json()])
-    return d
+    return d.drop_duplicates("data", keep="last")
 
 def llama_tvl_protocolo(slug, nome):
     r = requests.get(f"https://api.llama.fi/protocol/{slug}", timeout=60, headers=HDR); r.raise_for_status()
     d = pd.DataFrame(r.json().get("tvl", [])); d["data"] = pd.to_datetime(d["date"], unit="s").dt.strftime("%Y-%m-%d")
-    return d.rename(columns={"totalLiquidityUSD": nome})[["data", nome]]
+    areturn d.rename(columns={"totalLiquidityUSD": nome})[["data", nome]].drop_duplicates("data", keep="last")
 
 def deribit_dvol(moeda, anos=5):
     fim = int(time.time() * 1000); ini = fim - anos * 365 * 86400 * 1000; linhas = []
@@ -123,6 +123,7 @@ def main():
         t = partes[0]
         for x in partes[1:]: t = t.merge(x, on="data", how="outer")
         t = t.sort_values("data")
+      t = t.drop_duplicates("data", keep="last")
         if nome == "eth" and {"FlowInExUSD", "FlowOutExUSD"} <= set(t.columns):
             t["netflow_exchanges_usd"] = t["FlowInExUSD"] - t["FlowOutExUSD"]      # >0: entrada liquida em exchanges (pressao vendedora, hipotese)
             t["netflow_7d_usd"] = t["netflow_exchanges_usd"].rolling(7, min_periods=5).sum()
