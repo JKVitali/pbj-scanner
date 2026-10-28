@@ -1,0 +1,67 @@
+# PBJ scanner no GitLab CI (plano A2, espelho do GitHub Actions).
+# Agendamentos (CI/CD > Schedules), fuso America/Sao_Paulo, cada um com a variavel SCAN_KIND:
+#   1) Scanner semanal : "10 18 * * 5"   SCAN_KIND=scan    (sexta 18:10 BRT)
+#   2) Hurst diario    : "30 17 * * 1-5" SCAN_KIND=hurst   (dias uteis 17:30 BRT, antes da rotina das 18:44)
+#   3) Retornos diarios: "45 17 * * 1-5" SCAN_KIND=returns (dias uteis 17:45 BRT)
+# Variavel obrigatoria (Settings > CI/CD > Variables, mascarada e protegida): CI_PUSH_TOKEN
+#   = Project Access Token com role Maintainer e escopo write_repository.
+image: python:3.11-slim
+
+stages: [run]
+
+.base:
+  stage: run
+  before_script:
+    - apt-get update -qq && apt-get install -y -qq git > /dev/null
+    - pip install -q -r requirements.txt
+    - git config user.name "pbj-scanner-bot"
+    - git config user.email "pbj-scanner-bot@users.noreply.gitlab.com"
+    - git remote set-url origin "https://oauth2:${CI_PUSH_TOKEN}@${CI_SERVER_HOST}/${CI_PROJECT_PATH}.git"
+    - git fetch origin "${CI_DEFAULT_BRANCH}"
+    - git checkout -B "${CI_DEFAULT_BRANCH}" "origin/${CI_DEFAULT_BRANCH}"
+
+scan:
+  extends: .base
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $SCAN_KIND == "scan"'
+    - if: '$CI_PIPELINE_SOURCE == "web" && $SCAN_KIND == "scan"'
+  script:
+    - mkdir -p history
+    - python scan.py
+    - git add scan_results.csv relatorio.md history/ || true
+    - git commit -m "Scan automatico $(date -u +%Y-%m-%d) [skip ci]" || echo "sem mudancas"
+    - git pull --rebase origin "${CI_DEFAULT_BRANCH}" || true
+    - git push origin "HEAD:${CI_DEFAULT_BRANCH}" || echo "nada a enviar"
+  artifacts:
+    paths: [scan_results.csv, relatorio.md]
+    expire_in: 30 days
+
+hurst:
+  extends: .base
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $SCAN_KIND == "hurst"'
+    - if: '$CI_PIPELINE_SOURCE == "web" && $SCAN_KIND == "hurst"'
+  script:
+    - python hurst_scan.py
+    - git add hurst_results.csv history/ || true
+    - git commit -m "Hurst automatico $(date -u +%Y-%m-%d) [skip ci]" || echo "sem mudancas"
+    - git pull --rebase origin "${CI_DEFAULT_BRANCH}" || true
+    - git push origin "HEAD:${CI_DEFAULT_BRANCH}" || echo "nada a enviar"
+  artifacts:
+    paths: [hurst_results.csv]
+    expire_in: 30 days
+
+returns:
+  extends: .base
+  rules:
+    - if: '$CI_PIPELINE_SOURCE == "schedule" && $SCAN_KIND == "returns"'
+    - if: '$CI_PIPELINE_SOURCE == "web" && $SCAN_KIND == "returns"'
+  script:
+    - python ret_scan.py
+    - git add returns_results.csv history/ || true
+    - git commit -m "Retornos automaticos $(date -u +%Y-%m-%d) [skip ci]" || echo "sem mudancas"
+    - git pull --rebase origin "${CI_DEFAULT_BRANCH}" || true
+    - git push origin "HEAD:${CI_DEFAULT_BRANCH}" || echo "nada a enviar"
+  artifacts:
+    paths: [returns_results.csv]
+    expire_in: 30 days

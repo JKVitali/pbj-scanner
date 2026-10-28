@@ -1,0 +1,33 @@
+name: Indicadores cripto BTC ETH SOL LINK SKY (PBJ)
+
+on:
+  schedule:
+    # Todos os dias as 20:55 UTC (17:55 em Brasilia); cripto negocia 24h
+    - cron: "55 20 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  cripto:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Baixar indicadores (ETH, SOL, LINK, SKY, derivativos)
+        run: |
+          python btc_indicadores.py
+          python cripto_indicadores.py
+          python cripto_resumo.py
+      - name: Salvar no repositorio
+        run: |
+          git config user.name  "pbj-scanner-bot"
+          git config user.email "actions@github.com"
+          git add data/btc data/cripto data/cripto_resumo.csv || true
+          git commit -m "Indicadores cripto $(date -u +%Y-%m-%d)" || echo "sem mudancas"
+          git pull --rebase || true
+          git push || echo "nada a enviar"

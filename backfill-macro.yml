@@ -1,0 +1,28 @@
+name: Backfill macro (PBJ) - rodar uma vez
+
+on:
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  macro:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt requests
+      - name: Baixar maximo historico (Yahoo, FRED, BCB)
+        run: python backfill_macro.py
+      - name: Salvar no repositorio
+        run: |
+          git config user.name  "pbj-scanner-bot"
+          git config user.email "actions@github.com"
+          git add data/macro || true
+          git commit -m "Backfill macro $(date -u +%Y-%m-%d)" || echo "sem mudancas"
+          git pull --rebase || true
+          git push || echo "nada a enviar"

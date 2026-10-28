@@ -43,6 +43,10 @@ def main(src="scan_results.csv", out="hurst_results.csv"):
             "regime_H250", "VR5", "VR10", "AC1", "alerta_descontinuidade", "defasado"]
     res = res.reindex(columns=cols)
     res.to_csv(out, index=False)
+    import os
+    os.makedirs("history", exist_ok=True)   # historico diario em texto (CSV)
+    if len(res) and res["data"].notna().any():
+        res.to_csv(f"history/hurst_{res['data'].max()}.csv", index=False)
     print(f"{len(res)} ativos gravados em {out}")
 
 if __name__ == "__main__":

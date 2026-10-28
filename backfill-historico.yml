@@ -1,0 +1,35 @@
+name: Backfill historico (PBJ) - rodar uma vez
+
+on:
+  workflow_dispatch:
+    inputs:
+      anos:
+        description: "Anos de precos a baixar"
+        default: "10"
+      janela:
+        description: "Anos de retornos e Hurst a calcular (diario/semanal)"
+        default: "3"
+
+permissions:
+  contents: write
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -r requirements.txt
+      - name: Baixar e calcular historico
+        run: python backfill_historico.py --anos "${{ github.event.inputs.anos }}" --janela "${{ github.event.inputs.janela }}"
+      - name: Salvar no repositorio
+        run: |
+          git config user.name  "pbj-scanner-bot"
+          git config user.email "actions@github.com"
+          git add data/ history/ || true
+          git commit -m "Backfill historico $(date -u +%Y-%m-%d)" || echo "sem mudancas"
+          git pull --rebase || true
+          git push || echo "nada a enviar"
