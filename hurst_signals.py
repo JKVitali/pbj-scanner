@@ -24,8 +24,11 @@ def hurst_dfa(prices, min_box=8, max_frac=0.25, n_scales=12):
             c = np.polyfit(t, v, 1)
             res.append(np.mean((v - np.polyval(c, t)) ** 2))
         F.append(np.sqrt(np.mean(res)))
-    slope = np.polyfit(np.log(scales), np.log(F), 1)[0]
-    return float(slope)
+    if np.any(~np.isfinite(F)) or np.any(np.asarray(F) <= 0):
+        return np.nan
+    slope = float(np.polyfit(np.log(scales), np.log(F), 1)[0])
+    # H fora de [0,1] indica serie ilíquida/com dado ruim: nao confiavel
+    return slope if 0.0 <= slope <= 1.0 else np.nan
 
 def variance_ratio(prices, q):
     """VR(q) de Lo-MacKinlay: >1 persistente, <1 antipersistente."""
