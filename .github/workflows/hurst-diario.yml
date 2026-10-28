@@ -24,7 +24,7 @@ jobs:
         run: |
           git config user.name  "pbj-scanner-bot"
           git config user.email "actions@github.com"
-          git add hurst_results.csv || true
+          git add hurst_results.csv history/ || true
           git commit -m "Hurst automatico $(date -u +%Y-%m-%d)" || echo "sem mudancas"
           git pull --rebase || true
           git push || echo "nada a enviar"
