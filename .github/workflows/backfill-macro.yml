@@ -17,6 +17,8 @@ jobs:
           python-version: "3.11"
       - run: pip install -r requirements.txt requests
       - name: Baixar maximo historico (Yahoo, FRED, BCB)
+        env:
+          FRED_API_KEY: ${{ secrets.FRED_API_KEY }}
         run: python backfill_macro.py
       - name: Salvar no repositorio
         run: |
