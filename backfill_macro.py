@@ -2,7 +2,7 @@
 Rode UMA vez (Actions > Backfill macro), depois atualize incrementalmente com --atualizar.
 Gera, em texto (CSV):
   data/macro/yf/<TICKER>.csv   Yahoo, periodo maximo disponivel (date, open, high, low, close, volume)
-  data/macro/fred/<SERIE>.csv  FRED (fredgraph.csv, sem chave): date, value  (juros, curva, credito, M2, balanco do Fed...)
+  data/macro/fred/<SERIE>.csv  FRED (api.stlouisfed.org, requer secret FRED_API_KEY): date, value  (juros, curva, credito, M2, balanco do Fed...)
   data/macro/bcb/<SGS>_<nome>.csv  BCB SGS (Selic, CDI, IPCA, PTAX...), em janelas de 10 anos
   data/macro/INDICE.csv        resumo: fonte, serie, primeira data, ultima data, linhas
 Requer yfinance, pandas, requests. Hipotese/base de analise, nao recomendacao."""
@@ -40,14 +40,17 @@ def yf_max(ticker):
     return d[["Open","High","Low","Close","Volume"]].reset_index()
 
 def fred(serie):
-    import requests
-    r = requests.get("https://fred.stlouisfed.org/graph/fredgraph.csv", params={"id": serie}, timeout=60,
-                     headers={"User-Agent": "Mozilla/5.0 (pbj-scanner)"})
+    import os, requests
+    chave = os.environ.get("FRED_API_KEY")
+    if not chave: raise RuntimeError("defina o secret FRED_API_KEY (GitHub Actions) para usar a API do FRED")
+    r = requests.get("https://api.stlouisfed.org/fred/series/observations",
+        params={"series_id": serie, "api_key": chave, "file_type": "json"}, timeout=60,
+        headers={"User-Agent": "Mozilla/5.0 (pbj-scanner)"})
     r.raise_for_status()
-    return parse_fred(r.text, serie)
-
-def parse_fred(texto, serie):
-    d = pd.read_csv(io.StringIO(texto)); d.columns = ["date", "value"]
+    return parse_fred(r.json().get("observations", []), serie)
+    
+def parse_fred(observacoes, serie):
+    d = pd.DataFrame(observacoes, columns=["date", "value"])
     d["value"] = pd.to_numeric(d["value"], errors="coerce")  # FRED usa "." para vazio
     return d.dropna(subset=["value"]).reset_index(drop=True)
 
