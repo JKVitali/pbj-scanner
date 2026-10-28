@@ -123,7 +123,7 @@ def main():
         t = partes[0]
         for x in partes[1:]: t = t.merge(x, on="data", how="outer")
         t = t.sort_values("data")
-      t = t.drop_duplicates("data", keep="last")
+        t = t.drop_duplicates("data", keep="last")
         if nome == "eth" and {"FlowInExUSD", "FlowOutExUSD"} <= set(t.columns):
             t["netflow_exchanges_usd"] = t["FlowInExUSD"] - t["FlowOutExUSD"]      # >0: entrada liquida em exchanges (pressao vendedora, hipotese)
             t["netflow_7d_usd"] = t["netflow_exchanges_usd"].rolling(7, min_periods=5).sum()
