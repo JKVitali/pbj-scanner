@@ -52,7 +52,7 @@ def llama_stables_chain(chain):
 def llama_tvl_protocolo(slug, nome):
     r = requests.get(f"https://api.llama.fi/protocol/{slug}", timeout=60, headers=HDR); r.raise_for_status()
     d = pd.DataFrame(r.json().get("tvl", [])); d["data"] = pd.to_datetime(d["date"], unit="s").dt.strftime("%Y-%m-%d")
-    areturn d.rename(columns={"totalLiquidityUSD": nome})[["data", nome]].drop_duplicates("data", keep="last")
+    return d.rename(columns={"totalLiquidityUSD": nome})[["data", nome]].drop_duplicates("data", keep="last")
 
 def deribit_dvol(moeda, anos=5):
     fim = int(time.time() * 1000); ini = fim - anos * 365 * 86400 * 1000; linhas = []
