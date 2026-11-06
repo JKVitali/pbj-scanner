@@ -12,6 +12,7 @@ permissions:
 jobs:
   scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,6 +34,7 @@ jobs:
           git config user.email "actions@github.com"
           git add scan_results.csv relatorio.md history/ || true
           git commit -m "Scan automático $(date -u +%Y-%m-%d)" || echo "sem mudanças"
+          git pull --rebase || true
           git push || echo "nada a enviar"
 
       - name: Publicar como artefato (download pelo Actions)
