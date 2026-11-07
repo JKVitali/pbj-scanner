@@ -6,6 +6,10 @@ on:
     - cron: "45 20 * * 1-5"
   workflow_dispatch: {}
 
+concurrency:
+  group: pbj-git-push
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -22,9 +26,18 @@ jobs:
         run: python ret_scan.py
       - name: Salvar no repositorio
         run: |
+          set -euo pipefail
           git config user.name  "pbj-scanner-bot"
           git config user.email "actions@github.com"
-          git add returns_results.csv history/ || true
-          git commit -m "Retornos automaticos $(date -u +%Y-%m-%d)" || echo "sem mudancas"
-          git pull --rebase || true
-          git push || echo "nada a enviar"
+          git add -A returns_results.csv
+          [ -d history ] && git add -A history/
+          if git diff --cached --quiet; then
+            echo "Sem mudanças reais quando deveria haver — falhando para investigar."
+            exit 1
+          fi
+          git commit -m "Retornos automaticos $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            echo "push falhou (tentativa $i), re-sincronizando..."; sleep 5
+          done
+          git push
