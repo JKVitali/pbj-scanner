@@ -6,6 +6,10 @@ on:
     - cron: "55 20 * * *"
   workflow_dispatch: {}
 
+concurrency:
+  group: pbj-git-push
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
@@ -25,9 +29,17 @@ jobs:
           python cripto_resumo.py
       - name: Salvar no repositorio
         run: |
+          set -euo pipefail
           git config user.name  "pbj-scanner-bot"
           git config user.email "actions@github.com"
-          git add data/btc data/cripto data/cripto_resumo.csv || true
-          git commit -m "Indicadores cripto $(date -u +%Y-%m-%d)" || echo "sem mudancas"
-          git pull --rebase || true
-          git push || echo "nada a enviar"
+          git add -A data/btc data/cripto data/cripto_resumo.csv
+          if git diff --cached --quiet; then
+            echo "Sem mudanças reais quando deveria haver — falhando para investigar."
+            exit 1
+          fi
+          git commit -m "Indicadores cripto $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            echo "push falhou (tentativa $i), re-sincronizando..."; sleep 5
+          done
+          git push
