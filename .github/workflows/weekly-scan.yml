@@ -6,12 +6,17 @@ on:
     - cron: "10 21 * * 5"
   workflow_dispatch: {}   # permite rodar manualmente pelo botão "Run workflow"
 
+concurrency:
+  group: pbj-git-push
+  cancel-in-progress: false
+
 permissions:
   contents: write          # necessário para o workflow salvar o CSV de volta no repo
 
 jobs:
   scan:
     runs-on: ubuntu-latest
+    timeout-minutes: 60
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,13 +34,24 @@ jobs:
 
       - name: Salvar resultados no repositório
         run: |
+          set -euo pipefail
           git config user.name  "pbj-scanner-bot"
           git config user.email "actions@github.com"
-          git add scan_results.csv relatorio.md history/ || true
-          git commit -m "Scan automático $(date -u +%Y-%m-%d)" || echo "sem mudanças"
-          git push || echo "nada a enviar"
+          git add -A scan_results.csv relatorio.md
+          [ -d history ] && git add -A history/
+          if git diff --cached --quiet; then
+            echo "Sem mudanças reais quando deveria haver — falhando para investigar."
+            exit 1
+          fi
+          git commit -m "Scan automático $(date -u +%Y-%m-%d)"
+          for i in 1 2 3; do
+            git pull --rebase --autostash && git push && break
+            echo "push falhou (tentativa $i), re-sincronizando..."; sleep 5
+          done
+          git push
 
       - name: Publicar como artefato (download pelo Actions)
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: scan-results

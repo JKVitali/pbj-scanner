@@ -228,10 +228,29 @@ def run():
     tickers = [r[2] for r in uni]
     print(f"Baixando {len(tickers)} tickers (de {len(items)} símbolos da 1Listão)...")
     data = {}
+
+    def fetch_batch(ch, retries=3, backoff=5):
+        """Baixa um lote com retry/backoff — fontes externas (Yahoo Finance)
+        falham ou fazem rate-limit esporadicamente; sem isso um lote inteiro
+        era descartado silenciosamente na primeira falha."""
+        last_err = None
+        for attempt in range(1, retries + 1):
+            try:
+                return yf.download(ch, period=PERIOD, interval="1d", auto_adjust=True,
+                                    group_by="ticker", progress=False, threads=True)
+            except Exception as e:
+                last_err = e
+                print(f"    tentativa {attempt}/{retries} falhou ({e}); "
+                      f"aguardando {backoff}s...")
+                if attempt < retries:
+                    time.sleep(backoff)
+                    backoff *= 2
+        print(f"  lote falhou após {retries} tentativas: {last_err}")
+        return None
+
     for i, ch in enumerate(chunked(tickers, 40)):
-        try:
-            d = yf.download(ch, period=PERIOD, interval="1d", auto_adjust=True,
-                            group_by="ticker", progress=False, threads=True)
+        d = fetch_batch(ch)
+        if d is not None:
             for t in ch:
                 try:
                     df = (d if len(ch) == 1 else d[t]).dropna(how="all")
@@ -239,8 +258,6 @@ def run():
                         data[t] = df
                 except Exception:
                     pass
-        except Exception as e:
-            print("  erro lote:", e)
         print(f"  lote {i+1}/{(len(tickers)-1)//40+1}: total baixado {len(data)}")
         time.sleep(1)
 
@@ -257,9 +274,24 @@ def run():
             continue
         rows.append(dict(cat=cat, tv=tv, yf=yft, score=score(s),
                          signals="|".join(s), **m))
+
+    # Falha alto e visível em vez de "passar" sem gerar/atualizar os arquivos:
+    # antes, `return` aqui deixava o processo sair com código 0 e o workflow
+    # ficava verde mesmo sem nenhum dado novo (commit ficava "sem mudanças").
     if not rows:
-        print("\nNada baixado — verifique a internet do ambiente.")
-        return
+        raise RuntimeError(
+            "Nada baixado — verifique a internet do ambiente ou se a fonte "
+            "de dados (Yahoo Finance) esta bloqueando/alterando o acesso."
+        )
+    min_esperado = max(50, int(0.5 * len(tickers)))
+    if len(rows) < min_esperado:
+        raise RuntimeError(
+            f"Apenas {len(rows)} de {len(tickers)} ativos retornaram dados "
+            f"(mínimo esperado: {min_esperado}). A fonte de dados pode estar "
+            f"bloqueando/limitando o acesso — abortando sem sobrescrever os "
+            f"arquivos para não publicar um relatório incompleto."
+        )
+
     res = pd.DataFrame(rows).sort_values("score", ascending=False)
     res.to_csv("scan_results.csv", index=False)
     import os
