@@ -1,273 +1,252 @@
-# Scanner tecnico 1Listao - 31/10/2026
+# Scanner tecnico 1Listao - 07/11/2026
 
-Analisados: **330** | Com alarme: **153**
+Analisados: **330** | Com alarme: **148**
 
 > Ruido conhecido: BIL/SHV/STIP (tipo-caixa) e alts sub-centavo (ELON/ZIL/WILD) podem aparecer com sinal espurio.
 
 
-## Rompimento de ALTA (4)
+## Rompimento de ALTA (2)
 
-- **XLV** 184.04 (+2.4%) RSI 72 - vol 1.7x, -0% da max52s
-- **KAGUSD** 46.61 (+355.8%) RSI 70 - vol 4.4x, -54% da max52s
-- **STAG** 37.27 (+2.6%) RSI 62 - vol 1.4x, -12% da max52s
-- **XLB** 52.53 (+1.3%) RSI 70 - vol 1.4x, -3% da max52s
+- **NIFTY** 24,536.60 (+2.4%) RSI 75 - vol 1.5x, -7% da max52s
+- **HSI** 24,796.98 (+3.7%) RSI 63 - vol 1.7x, -12% da max52s
 
-## Rompimento de BAIXA (19)
+## Rompimento de BAIXA (4)
 
-- **XAUTUSD** 3,879.94 (-3.0%) RSI 26 - vol 2.8x
-- **PAXGUSDT** 3,896.49 (-2.7%) RSI 26 - vol 1.9x
-- **XAUUSD** 3,884.90 (-3.6%) RSI 27 - vol 1.5x
-- **CSNA3** 3.88 (-8.5%) RSI 29 - vol 1.3x
-- **CNES11** 1.27 (-5.9%) RSI 34 - vol 3.6x
-- **PLATINUM** 1,434.50 (-4.0%) RSI 24 - vol 19.7x
-- **GOOGL** 283.82 (-12.6%) RSI 22 - vol 4.5x
-- **PALLADIUM** 977.50 (-2.3%) RSI 20 - vol 19.9x
-- **SILVER** 49.13 (-5.9%) RSI 22 - vol 19.4x
-- **SPPP** 11.27 (-3.0%) RSI 21 - vol 3.3x
-- **AMZN** 243.79 (-4.2%) RSI 41 - vol 2.2x
-- **PLTM** 13.48 (-3.6%) RSI 29 - vol 1.3x
-- **SHIBUSDT** 0.00 (-3.8%) RSI 24 - vol 1.7x
-- **SLV** 47.28 (-3.6%) RSI 29 - vol 1.4x
-- **XLC** 101.21 (-1.9%) RSI 25 - vol 1.6x
-- **MRVL** 218.34 (-13.2%) RSI 40 - vol 1.9x
-- **BTCUSD** 77,238.75 (-0.7%) RSI 34 - vol 1.5x
-- **KGC** 21.60 (-6.0%) RSI 33 - vol 2.0x
-- **ES1!** 7,614.50 (-1.8%) RSI 40 - vol 1.4x
+- **SCRTBTC** 0.00 (-14.9%) RSI 15 - vol 3.9x
+- **WILDUSD** 0.01 (-4.2%) RSI 26 - vol 1.5x
+- **ERGUSDT** 0.20 (-23.7%) RSI 27 - vol 5.7x
+- **XW1!** 590.50 (-1.5%) RSI 23 - vol 1.3x
 
-## Nova maxima 52 semanas (7)
+## Nova maxima 52 semanas (4)
 
-- **XLV** 184.04 (+2.4%) RSI 72
-- **BIL** 91.67 (+0.0%) RSI 96
-- **USDTRY** 49.94 (+0.2%) RSI 98
 - **RELG11** 69.95 (+0.0%) RSI 89
-- **SHV** 110.39 (+0.0%) RSI 98
-- **USDARS** 1,538.49 (-0.2%) RSI 68
-- **STIP** 100.98 (+0.1%) RSI 70
+- **USDTRY** 50.15 (+0.2%) RSI 99
+- **BIL** 91.46 (+0.0%) RSI 42
+- **SHV** 110.13 (+0.0%) RSI 44
 
-## Nova minima 52 semanas (6)
+## Nova minima 52 semanas (3)
 
-- **XAUTUSD** 3,879.94 (-3.0%) RSI 26
-- **PAXGUSDT** 3,896.49 (-2.7%) RSI 26
-- **XAUUSD** 3,884.90 (-3.6%) RSI 27
-- **CSNA3** 3.88 (-8.5%) RSI 29
-- **ETER3** 2.68 (-5.0%) RSI 21
-- **BBDC4** 13.86 (-2.1%) RSI 23
+- **SCRTBTC** 0.00 (-14.9%) RSI 15
+- **WILDUSD** 0.01 (-4.2%) RSI 26
+- **CRLBF** 0.56 (-2.2%) RSI 38
 
-## ACUMULACAO (squeeze + OBV sobe, fundo range) (3)
+## ACUMULACAO (squeeze + OBV sobe, fundo range) (1)
 
-- **FNV** 231.60 (-3.0%) RSI 41 - BB 10pct, range 49%
-- **GFI** 35.12 (-3.1%) RSI 41 - BB 3pct, range 17%
-- **PATH** 13.78 (-2.9%) RSI 51 - BB 8pct, range 43%
+- **PATH** 13.00 (-0.1%) RSI 43 - BB 12pct, range 36%
 
 ## DISTRIBUICAO (squeeze + OBV cai, topo range) (4)
 
-- **PLTR** 196.42 (-0.2%) RSI 53
-- **HG1!** 6.51 (-1.1%) RSI 47
-- **CT1!** 78.13 (-0.5%) RSI 44
-- **SLCE3** 17.02 (+0.1%) RSI 49
+- **AFCG** 3.17 (+6.0%) RSI 53
+- **SX5E** 6,231.54 (-0.5%) RSI 53
+- **CT1!** 78.54 (-0.2%) RSI 48
+- **CXSE3** 20.50 (-2.1%) RSI 49
 
-## Squeeze (rompimento iminente) (17)
+## Squeeze (rompimento iminente) (8)
 
-- **B** 38.67 (-2.6%) RSI 42
-- **DXY** 101.96 (-0.1%) RSI 55
-- **MSFT** 530.14 (-0.2%) RSI 55
-- **NEM** 111.80 (-1.9%) RSI 43
-- **AEM** 175.92 (-3.9%) RSI 42
-- **USDJPY** 157.80 (-0.0%) RSI 51
-- **EWH** 22.02 (+0.9%) RSI 49
-- **USDEUR** 0.89 (-0.2%) RSI 62
-- **HMY** 15.73 (-2.7%) RSI 37
-- **SX5E** 6,207.07 (+0.6%) RSI 51
-- **OIBR4** 0.50 (+0.0%) RSI 46
+- **URNM** 41.28 (+3.0%) RSI 39
+- **REMX** 51.40 (+1.7%) RSI 35
+- **EGLDUSDT** 3.22 (+1.3%) RSI 38
+- **USDEUR** 0.89 (+0.1%) RSI 52
+- **GLPI** 38.89 (-1.4%) RSI 48
+- **BIDU** 81.87 (+3.0%) RSI 51
 - **OIBR3** 0.10 (+0.0%) RSI 41
-- **JPYAUD** 0.01 (+0.5%) RSI 48
-- **SBSW** 9.24 (-1.8%) RSI 37
-- **DBC** 33.72 (-0.2%) RSI 59
-- **GTY** 28.07 (+1.9%) RSI 45
-- **EZA** 64.09 (-0.4%) RSI 46
+- **OIBR4** 0.50 (+0.0%) RSI 46
 
-## Golden cross (1)
+## Golden cross (4)
 
-- **AMT** 185.88 (+1.2%) RSI 61
+- **USDBRL** 5.50 (+0.8%) RSI 71
+- **VVIX** 121.94 (-9.7%) RSI 59
+- **VIX** 25.64 (-9.0%) RSI 63
+- **XLRE** 44.00 (-0.7%) RSI 60
 
-## Death cross (10)
+## Death cross (13)
 
-- **AGPPF** 67.50 (-4.6%) RSI 44
-- **CMIN3** 4.86 (+8.0%) RSI 46
-- **MSOS** 4.08 (+0.7%) RSI 42
-- **ERGUSDT** 0.28 (-3.0%) RSI 43
-- **RBVA11** 8.12 (-0.2%) RSI 27
-- **LVBI11** 95.99 (+0.2%) RSI 37
-- **AFCG** 3.02 (+1.0%) RSI 40
-- **HGRU11** 114.00 (+1.1%) RSI 38
-- **SILJ** 23.87 (-2.7%) RSI 36
-- **HL** 14.45 (-3.2%) RSI 37
+- **HMY** 17.17 (+1.6%) RSI 55
+- **SIL** 79.36 (+2.6%) RSI 49
+- **GOOGL** 284.78 (+0.8%) RSI 30
+- **CLS** 206.68 (+0.5%) RSI 30
+- **ITEQ** 54.26 (+3.1%) RSI 34
+- **CRDO** 120.51 (+7.3%) RSI 34
+- **GDXJ** 107.74 (+2.8%) RSI 52
+- **RECR11** 71.50 (-0.6%) RSI 45
+- **BBAS3** 17.13 (+3.9%) RSI 32
+- **HUT** 52.65 (+14.6%) RSI 38
+- **CMIN3** 5.03 (+2.7%) RSI 51
+- **AMER3** 4.39 (+4.5%) RSI 42
+- **BMNR** 18.76 (-1.3%) RSI 36
 
-## Reconquistou EMA200 (14)
+## Reconquistou EMA200 (17)
 
-- **STAG** 37.27 (+2.6%) RSI 62
-- **EWY** 161.83 (-2.5%) RSI 46
-- **USDJPY** 157.80 (-0.0%) RSI 51
-- **DLR** 182.91 (+1.7%) RSI 57
-- **ALAB** 290.43 (-2.3%) RSI 45
-- **XLU** 43.14 (+1.5%) RSI 63
-- **XLY** 116.20 (+0.8%) RSI 62
-- **XLI** 170.13 (+1.0%) RSI 54
-- **DB** 34.86 (+4.0%) RSI 56
-- **COF** 208.74 (+1.9%) RSI 61
-- **TIP** 106.44 (+0.2%) RSI 67
-- **SPIB** 32.62 (+0.2%) RSI 62
-- **HYG** 77.58 (-0.0%) RSI 56
-- **EQIX** 1,036.67 (+2.9%) RSI 58
+- **NIFTY** 24,536.60 (+2.4%) RSI 75
+- **HMY** 17.17 (+1.6%) RSI 55
+- **JPYAUD** 0.01 (+1.6%) RSI 61
+- **INDA** 50.89 (+1.7%) RSI 74
+- **ABEV3** 15.48 (+0.0%) RSI 47
+- **WPM** 136.31 (+2.9%) RSI 56
+- **AEM** 191.57 (+1.3%) RSI 57
+- **B** 40.56 (+0.5%) RSI 53
+- **ANET** 170.80 (+7.3%) RSI 43
+- **FNV** 254.95 (+1.7%) RSI 60
+- **GFI** 39.17 (+3.5%) RSI 59
+- **DB** 34.84 (-4.3%) RSI 53
+- **GDX** 87.60 (+2.2%) RSI 54
+- **DEXP3** 7.56 (+5.3%) RSI 51
+- **CXCI11** 64.28 (+3.6%) RSI 48
+- **NEM** 120.91 (+1.0%) RSI 58
+- **EZA** 67.06 (+0.2%) RSI 60
 
-## Perdeu EMA200 (10)
+## Perdeu EMA200 (26)
 
-- **CNES11** 1.27 (-5.9%) RSI 34
-- **AMZN** 243.79 (-4.2%) RSI 41
-- **ERGUSDT** 0.28 (-3.0%) RSI 43
-- **SOLUSDT** 96.29 (+0.8%) RSI 32
-- **CXCI11** 63.17 (-1.0%) RSI 33
-- **LTCUSD** 55.84 (+1.7%) RSI 39
-- **ABEV3** 14.60 (+0.3%) RSI 34
-- **ETHUSD** 2,245.17 (-0.2%) RSI 31
-- **JHSF3** 8.97 (+3.1%) RSI 31
-- **IRBR3** 55.68 (+0.3%) RSI 30
+- **PATH** 13.00 (-0.1%) RSI 43
+- **MSOS** 4.24 (+2.7%) RSI 49
+- **LINKUSDT** 10.81 (+1.5%) RSI 40
+- **DELL** 328.53 (+3.7%) RSI 29
+- **XLK** 164.74 (+1.5%) RSI 29
+- **XLI** 162.67 (+0.1%) RSI 38
+- **PBR** 18.53 (-1.4%) RSI 25
+- **SRUUF** 18.52 (+0.4%) RSI 44
+- **KEY** 20.85 (-0.5%) RSI 49
+- **CFG** 63.24 (-0.9%) RSI 44
+- **BTCUSD** 75,780.17 (-0.2%) RSI 38
+- **MU** 690.00 (+5.1%) RSI 31
+- **COF** 201.87 (-1.0%) RSI 47
+- **NVDA** 186.64 (+2.8%) RSI 31
+- **TSM** 375.44 (+6.3%) RSI 36
+- **TSLA** 358.22 (+4.2%) RSI 42
+- **BZQ** 21.89 (-1.2%) RSI 68
+- **NI225** 61,077.90 (-1.8%) RSI 34
+- **CPER** 37.67 (+0.8%) RSI 38
+- **YOLO** 2.77 (+0.0%) RSI 53
+- **MTB** 217.75 (-0.9%) RSI 44
+- **PLTR** 160.38 (+3.5%) RSI 31
+- **STAG** 36.60 (-0.8%) RSI 49
+- **DLR** 174.20 (-0.3%) RSI 45
+- **USDJPY** 157.50 (-0.5%) RSI 47
+- **IXIC** 24,579.42 (+1.1%) RSI 34
 
-## MACD cruzou p/ alta (11)
+## MACD cruzou p/ alta (14)
 
-- **CMIN3** 4.86 (+8.0%) RSI 46
-- **KAGUSD** 46.61 (+355.8%) RSI 70
-- **EWY** 161.83 (-2.5%) RSI 46
-- **MU** 934.27 (-5.0%) RSI 47
-- **APLD** 19.41 (-4.8%) RSI 41
-- **FLOKIUSDT** 0.00 (+10.1%) RSI 49
-- **VIX** 19.42 (+12.9%) RSI 59
-- **YOLO** 2.62 (+2.3%) RSI 43
-- **POET** 5.66 (-3.1%) RSI 38
-- **LEU** 110.55 (-1.3%) RSI 38
-- **RIOT** 13.74 (-4.9%) RSI 36
+- **URNM** 41.28 (+3.0%) RSI 39
+- **PLATINUM** 1,537.00 (+0.8%) RSI 44
+- **SPPP** 11.86 (+0.0%) RSI 41
+- **WULF** 11.37 (+12.8%) RSI 44
+- **KGC** 22.24 (+3.0%) RSI 46
+- **JPYAUD** 0.01 (+1.6%) RSI 61
+- **PLTM** 13.86 (+0.7%) RSI 44
+- **ILVUSDT** 2.91 (+2.9%) RSI 40
+- **NXE** 8.25 (+4.0%) RSI 45
+- **SILVER** 51.97 (-0.5%) RSI 38
+- **LEU** 104.60 (+17.5%) RSI 42
+- **CIFR** 6.55 (+17.9%) RSI 33
+- **XLC** 104.79 (+0.4%) RSI 44
+- **AMAR3** 0.75 (+0.0%) RSI 50
 
-## MACD cruzou p/ baixa (3)
+## MACD cruzou p/ baixa (4)
 
-- **AGPPF** 67.50 (-4.6%) RSI 44
-- **BIL** 91.67 (+0.0%) RSI 96
-- **HMY** 15.73 (-2.7%) RSI 37
+- **CRLBF** 0.56 (-2.2%) RSI 38
+- **XLI** 162.67 (+0.1%) RSI 38
+- **SRUUF** 18.52 (+0.4%) RSI 44
+- **SHIBUSDT** 0.00 (-9.0%) RSI 12
 
-## Divergencia de ALTA (RSI) (35)
+## Divergencia de ALTA (RSI) (44)
 
-- **FNV** 231.60 (-3.0%) RSI 41
-- **GFI** 35.12 (-3.1%) RSI 41
-- **AGPPF** 67.50 (-4.6%) RSI 44
-- **CMIN3** 4.86 (+8.0%) RSI 46
-- **MSOS** 4.08 (+0.7%) RSI 42
-- **B** 38.67 (-2.6%) RSI 42
-- **REMX** 52.69 (-3.1%) RSI 29
-- **NEM** 111.80 (-1.9%) RSI 43
-- **AEM** 175.92 (-3.9%) RSI 42
-- **EWH** 22.02 (+0.9%) RSI 49
-- **ECH** 35.51 (-1.9%) RSI 33
-- **NXE** 8.65 (-3.2%) RSI 47
-- **URNM** 44.78 (-2.2%) RSI 46
-- **CORZ** 14.43 (-3.8%) RSI 45
-- **LYSDY** 8.30 (-8.3%) RSI 45
-- **UUUU** 8.23 (-1.9%) RSI 34
-- **MP** 41.64 (+1.4%) RSI 45
-- **USAR** 10.52 (+0.4%) RSI 38
-- **KC1!** 287.15 (+0.6%) RSI 41
-- **BIDU** 78.65 (-1.1%) RSI 35
-- **GDX** 81.33 (-3.1%) RSI 39
-- **VXX** 17.41 (-2.1%) RSI 46
-- **GTBIF** 6.23 (-3.1%) RSI 38
-- **CHGG** 0.69 (-1.4%) RSI 44
-- **BKSY** 19.20 (+0.5%) RSI 47
-- **NLCP** 13.72 (+0.7%) RSI 42
-- **CHCT** 13.05 (+2.4%) RSI 42
-- **RECR11** 71.03 (+1.5%) RSI 39
-- **WULF** 12.75 (-5.0%) RSI 46
-- **UEC** 8.15 (-2.3%) RSI 43
-- **PLD** 128.02 (+2.2%) RSI 47
-- **DNN** 2.37 (-1.3%) RSI 45
-- **CCJ** 83.49 (-0.4%) RSI 46
-- **URA** 35.72 (-2.3%) RSI 40
-- **CLPUSD** 0.00 (-0.1%) RSI 41
+- **URNM** 41.28 (+3.0%) RSI 39
+- **SIL** 79.36 (+2.6%) RSI 49
+- **PLATINUM** 1,537.00 (+0.8%) RSI 44
+- **MSOS** 4.24 (+2.7%) RSI 49
+- **LINKUSDT** 10.81 (+1.5%) RSI 40
+- **SPPP** 11.86 (+0.0%) RSI 41
+- **PALLADIUM** 1,021.50 (-1.9%) RSI 41
+- **WULF** 11.37 (+12.8%) RSI 44
+- **REMX** 51.40 (+1.7%) RSI 35
+- **KGC** 22.24 (+3.0%) RSI 46
+- **EGLDUSDT** 3.22 (+1.3%) RSI 38
+- **PLTM** 13.86 (+0.7%) RSI 44
+- **ILVUSDT** 2.91 (+2.9%) RSI 40
+- **NXE** 8.25 (+4.0%) RSI 45
+- **BNBUSDT** 693.31 (+0.8%) RSI 40
+- **ETHUSD** 2,237.22 (+0.1%) RSI 40
+- **XAUUSD** 4,079.50 (-0.8%) RSI 47
+- **XTZUSD** 0.27 (+11.0%) RSI 48
+- **SILJ** 24.79 (+3.2%) RSI 48
+- **SBSW** 9.50 (+0.8%) RSI 48
+- **CGC** 0.65 (-3.6%) RSI 36
+- **ZILUSDT** 0.00 (+7.6%) RSI 31
+- **DCRUSDT** 12.58 (+0.7%) RSI 30
+- **ECH** 35.75 (+1.0%) RSI 43
+- **HL** 14.74 (+2.0%) RSI 46
+- **IREN** 21.64 (+20.0%) RSI 36
+- **FLOKIUSDT** 0.00 (+3.0%) RSI 42
+- **BBAI** 2.22 (+0.0%) RSI 41
+- **IAU** 76.38 (-0.8%) RSI 48
+- **IMPUY** 10.77 (-2.0%) RSI 47
+- **NLCP** 13.89 (+1.5%) RSI 48
+- **PALL** 18.56 (-1.5%) RSI 41
+- **ANGPY** 11.64 (-2.4%) RSI 45
+- **TLRY** 2.92 (+3.9%) RSI 44
+- **STT** 165.56 (+0.2%) RSI 38
+- **SOUN** 4.11 (-3.5%) RSI 31
+- **POET** 5.07 (+19.0%) RSI 41
+- **DNN** 2.19 (+6.3%) RSI 42
+- **PLD** 126.96 (-1.2%) RSI 44
+- **USAR** 8.23 (+10.8%) RSI 32
+- **MARA** 6.35 (+8.0%) RSI 34
+- **CORZ** 11.76 (+3.3%) RSI 38
+- **VALE3** 64.04 (+2.2%) RSI 46
+- **LYSDY** 8.38 (-2.1%) RSI 47
 
-## Divergencia de BAIXA (RSI) (7)
+## Divergencia de BAIXA (RSI) (3)
 
-- **PLTR** 196.42 (-0.2%) RSI 53
-- **DXY** 101.96 (-0.1%) RSI 55
-- **MSFT** 530.14 (-0.2%) RSI 55
-- **USDEUR** 0.89 (-0.2%) RSI 62
-- **USDCLP** 987.87 (+0.1%) RSI 59
-- **AI** 12.17 (-1.3%) RSI 58
-- **PETR3** 60.01 (+1.6%) RSI 50
+- **AI** 11.69 (+2.7%) RSI 51
+- **DXY** 102.28 (+0.7%) RSI 59
+- **AMT** 188.79 (-2.7%) RSI 58
 
-## Volume anormal (10)
+## Volume anormal (9)
 
-- **XAUTUSD** 3,879.94 (-3.0%) RSI 26 - vol 2.8x
-- **CNES11** 1.27 (-5.9%) RSI 34 - vol 3.6x
-- **PLATINUM** 1,434.50 (-4.0%) RSI 24 - vol 19.7x
-- **GOOGL** 283.82 (-12.6%) RSI 22 - vol 4.5x
-- **PALLADIUM** 977.50 (-2.3%) RSI 20 - vol 19.9x
-- **SILVER** 49.13 (-5.9%) RSI 22 - vol 19.4x
-- **KAGUSD** 46.61 (+355.8%) RSI 70 - vol 4.4x
-- **SPPP** 11.27 (-3.0%) RSI 21 - vol 3.3x
-- **HG1!** 6.51 (-1.1%) RSI 47 - vol 11.8x
-- **MKRUSDT** 1,539.71 (+0.8%) RSI 42 - vol 6.5x
+- **SCRTBTC** 0.00 (-14.9%) RSI 15 - vol 3.9x
+- **ERGUSDT** 0.20 (-23.7%) RSI 27 - vol 5.7x
+- **AFCG** 3.17 (+6.0%) RSI 53 - vol 2.6x
+- **PLATINUM** 1,537.00 (+0.8%) RSI 44 - vol 19.7x
+- **PALLADIUM** 1,021.50 (-1.9%) RSI 41 - vol 19.9x
+- **SILVER** 51.97 (-0.5%) RSI 38 - vol 19.5x
+- **HG1!** 6.26 (+0.2%) RSI 38 - vol 14.1x
+- **CXTL11** 325.00 (-7.1%) RSI 48 - vol 2.8x
+- **SKYUSDT** 0.01 (-0.0%) RSI 53 - vol 6.7x
 
-## RSI sobrevendido (<30) (45)
+## RSI sobrevendido (<30) (23)
 
-- **XAUTUSD** 3,879.94 (-3.0%) RSI 26
-- **PAXGUSDT** 3,896.49 (-2.7%) RSI 26
-- **XAUUSD** 3,884.90 (-3.6%) RSI 27
-- **CSNA3** 3.88 (-8.5%) RSI 29
-- **PLATINUM** 1,434.50 (-4.0%) RSI 24
-- **GOOGL** 283.82 (-12.6%) RSI 22
-- **PALLADIUM** 977.50 (-2.3%) RSI 20
-- **SILVER** 49.13 (-5.9%) RSI 22
-- **SPPP** 11.27 (-3.0%) RSI 21
-- **PLTM** 13.48 (-3.6%) RSI 29
-- **SHIBUSDT** 0.00 (-3.8%) RSI 24
-- **SLV** 47.28 (-3.6%) RSI 29
-- **XLC** 101.21 (-1.9%) RSI 25
-- **RBVA11** 8.12 (-0.2%) RSI 27
-- **ETER3** 2.68 (-5.0%) RSI 21
-- **BBDC4** 13.86 (-2.1%) RSI 23
-- **REMX** 52.69 (-3.1%) RSI 29
-- **DCRUSDT** 13.13 (-3.4%) RSI 27
-- **ZILUSDT** 0.00 (+1.7%) RSI 30
-- **MCHI** 48.96 (-0.2%) RSI 28
-- **BBDC3** 12.71 (-1.9%) RSI 24
-- **SCRTBTC** 0.01 (+0.6%) RSI 29
-- **KWEB** 22.79 (-0.9%) RSI 29
-- **TLRY** 2.64 (-1.9%) RSI 20
-- **IMPUY** 9.79 (-6.4%) RSI 30
-- **PALL** 18.22 (-1.7%) RSI 23
-- **SOUN** 4.36 (-1.8%) RSI 30
-- **ANGPY** 10.64 (-7.6%) RSI 29
-- **CGC** 0.68 (+0.4%) RSI 27
-- **ZC1!** 447.50 (-0.8%) RSI 25
-- **XW1!** 603.25 (-0.1%) RSI 25
-- **AZEV4** 0.69 (-2.8%) RSI 23
-- **BBAS3** 16.47 (+0.1%) RSI 25
-- **VALE** 11.18 (-2.5%) RSI 20
-- **ESPA3** 4.70 (+2.0%) RSI 26
-- **INEP4** 1.02 (-1.9%) RSI 29
-- **CORN** 17.44 (+0.1%) RSI 24
-- **COGN3** 1.58 (-1.9%) RSI 28
-- **SMAL11** 92.15 (-0.4%) RSI 28
-- **SIMH3** 4.84 (+0.2%) RSI 29
-- **XP** 15.05 (-6.5%) RSI 29
-- **CIFR** 8.10 (-8.7%) RSI 28
-- **BOVA11** 165.40 (-0.7%) RSI 26
-- **EWZ** 33.14 (-1.4%) RSI 28
-- **IBOV** 167,921.80 (-0.7%) RSI 25
+- **SCRTBTC** 0.00 (-14.9%) RSI 15
+- **WILDUSD** 0.01 (-4.2%) RSI 26
+- **ERGUSDT** 0.20 (-23.7%) RSI 27
+- **XW1!** 590.50 (-1.5%) RSI 23
+- **GOOGL** 284.78 (+0.8%) RSI 30
+- **CLS** 206.68 (+0.5%) RSI 30
+- **DELL** 328.53 (+3.7%) RSI 29
+- **XLK** 164.74 (+1.5%) RSI 29
+- **PBR** 18.53 (-1.4%) RSI 25
+- **SHIBUSDT** 0.00 (-9.0%) RSI 12
+- **EWZ** 31.98 (+0.7%) RSI 29
+- **UUUU** 6.66 (+1.1%) RSI 24
+- **ZC1!** 442.25 (+0.5%) RSI 27
+- **PETR3** 51.21 (-1.1%) RSI 30
+- **VSLH11** 1.48 (+1.4%) RSI 28
+- **CORN** 17.19 (+0.2%) RSI 28
+- **BCRI11** 48.40 (+0.4%) RSI 29
+- **COGN3** 1.46 (+5.0%) RSI 30
+- **MRVL** 141.20 (+5.7%) RSI 26
+- **ALAB** 190.71 (+6.3%) RSI 29
+- **INOD** 37.03 (-4.1%) RSI 29
+- **CBRS** 89.68 (+9.8%) RSI 29
+- **IMCC** 0.64 (+7.6%) RSI 30
 
-## RSI sobrecomprado (>70) (7)
+## RSI sobrecomprado (>70) (9)
 
-- **XLV** 184.04 (+2.4%) RSI 72
-- **BIL** 91.67 (+0.0%) RSI 96
-- **USDTRY** 49.94 (+0.2%) RSI 98
+- **NIFTY** 24,536.60 (+2.4%) RSI 75
 - **RELG11** 69.95 (+0.0%) RSI 89
-- **SHV** 110.39 (+0.0%) RSI 98
-- **CNNE** 17.15 (+1.8%) RSI 72
-- **EXR** 149.90 (+3.6%) RSI 75
+- **USDBRL** 5.50 (+0.8%) RSI 71
+- **USDTRY** 50.15 (+0.2%) RSI 99
+- **INDA** 50.89 (+1.7%) RSI 74
+- **CUBE** 45.02 (-0.8%) RSI 75
+- **EXR** 159.19 (-0.6%) RSI 79
+- **BRK.B** 570.89 (-0.3%) RSI 74
+- **ACB** 5.24 (+1.0%) RSI 77
