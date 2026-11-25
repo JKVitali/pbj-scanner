@@ -1,38 +1,38 @@
 grupo,ativo,indicador,valor,data,var_1d,var_7d,var_30d,tipo_var,percentil,faixa
-Preço e sentimento,BTC,Preço (US$),61253.2,2026-11-23,0.244666,-5.68087,-24.097,pct,84,
-Preço e sentimento,BTC,Fear & Greed (0–100),11,2026-11-24,0,-1,-43,abs,2,medo extremo
-Valuation on-chain,BTC,MVRV,1.15241,2026-11-23,0.00397,-0.05933,-0.34018,abs,18,faixa intermediária
-Mineradores,BTC,"Hash rate (média 7d, TH/s)",1.04936e+09,2026-11-23,0.36632,6.91383,-2.21951,pct,98,
-Mineradores,BTC,Hash ribbon (MM30/MM60),0.995702,2026-11-24,-0.004768,-0.020658,-0.049488,abs,17,capitulação de mineradores
-Mineradores,BTC,"Hashprice (US$/TH/s/dia, média 7d)",0.0324341,2026-11-23,-2.0846,-2.25957,-19.3731,pct,10,
-Mineradores,BTC,Puell (receita/MM365),0.932158,2026-11-23,0.048234,-0.121492,-0.142852,abs,39,intermediário
-Mineradores,BTC,Dificuldade,1.34824e+14,2026-11-23,0,0,-4.0931,pct,96,
-Atividade,BTC,Endereços ativos (média 7d),681684,2026-11-23,0.22657,4.04151,8.90388,pct,55,
-Derivativos,BTC,DVOL (vol. implícita 30d),53.36,2026-11-24,1.04,10.07,14.56,abs,51,
-Derivativos,BTC,Funding perpétuo (% a.a.),1.79244,2026-11-24,33.0359,-11.7064,-25.5291,abs,20,normal
-Preço e sentimento,ETH,Preço (US$),1709.9,2026-11-23,-0.584897,-6.03448,-27.2999,pct,58,
-Preço e sentimento,ETH,ETH/BTC,0.0279152,2026-11-23,-0.827867,-0.375252,-4.21968,pct,29,
-Valuation on-chain,ETH,MVRV,0.8509,2026-11-23,-0.001355,-0.025327,-0.19309,abs,16,abaixo do custo realizado
-Atividade,ETH,Endereços ativos (média 7d),835228,2026-11-23,-6.04028,-9.20289,0.654706,pct,93,
-Fluxos,ETH,"Netflow exchanges, 7d (US$)",2.89512e+08,2026-11-24,-1.09422e+08,7.7429e+08,4.14351e+08,abs,92,"entrada líquida (pressão vendedora, hipótese)"
-DeFi,ETH,TVL da rede (US$),3.59157e+10,2026-11-24,-1.39334,-3.92479,-21.9139,pct,56,
-DeFi,ETH,Stablecoins na rede (US$),1.29451e+11,2026-11-24,0.132271,-1.9474,-9.70782,pct,86,
-Derivativos,ETH,DVOL (vol. implícita 30d),65.82,2026-11-24,0.08,7.69,12.2,abs,47,
-Derivativos,ETH,Funding perpétuo (% a.a.),-7.46142,2026-11-24,22.4968,2.32349,-12.7481,abs,18,vendedores pagam
-Preço e sentimento,SOL,Preço (US$),71.894,2026-11-23,1.96414,0.709508,-29.5661,pct,46,
-Preço e sentimento,SOL,SOL/BTC,0.00117372,2026-11-23,1.71527,6.77532,-7.20532,pct,40,
-DeFi,SOL,TVL da rede (US$),4.6051e+09,2026-11-24,-0.269839,-2.20496,-20.0478,pct,51,
-DeFi,SOL,Stablecoins na rede (US$),1.38067e+10,2026-11-24,3.61268,-3.11904,-7.72156,pct,77,
-Preço e sentimento,LINK,Preço (US$),8.98842,2026-11-23,2.1351,-1.37366,-22.5036,pct,51,
-Preço e sentimento,LINK,LINK/BTC,0.000146742,2026-11-23,1.88581,4.56664,2.09918,pct,29,
-Valuation on-chain,LINK,MVRV,0.798907,2026-11-23,0.020011,0.009353,-0.159014,abs,11,abaixo do custo realizado
-Atividade,LINK,Endereços ativos (média 7d),4509.29,2026-11-23,0.599165,-10.9189,9.48285,pct,73,
-Preço e sentimento,SKY,Preço (US$),0.04042,2026-11-23,-8.38414,-31.1442,-42.744,pct,43,
-Preço e sentimento,SKY,SKY/ETH,2.36389e-05,2026-11-23,-7.84489,-22.5478,-19.4446,pct,20,
+Preço e sentimento,BTC,Preço (US$),59790.7,2026-11-24,-2.38763,-7.88421,-25.2979,pct,83,
+Preço e sentimento,BTC,Fear & Greed (0–100),13,2026-11-25,2,2,-37,abs,5,medo extremo
+Valuation on-chain,BTC,MVRV,1.12602,2026-11-24,-0.02639,-0.08588,-0.35429,abs,17,faixa intermediária
+Mineradores,BTC,"Hash rate (média 7d, TH/s)",1.04266e+09,2026-11-24,-0.638687,6.18525,-2.66289,pct,98,
+Mineradores,BTC,Hash ribbon (MM30/MM60),0.990639,2026-11-25,-0.004172,-0.021331,-0.054591,abs,14,capitulação de mineradores
+Mineradores,BTC,"Hashprice (US$/TH/s/dia, média 7d)",0.0318564,2026-11-24,-1.78102,-4.40235,-20.555,pct,9,
+Mineradores,BTC,Puell (receita/MM365),0.765369,2026-11-24,-0.166789,-0.146159,-0.405211,abs,25,intermediário
+Mineradores,BTC,Dificuldade,1.34824e+14,2026-11-24,0,0,-4.0931,pct,96,
+Atividade,BTC,Endereços ativos (média 7d),683166,2026-11-24,0.217445,5.02555,10.8758,pct,55,
+Derivativos,BTC,DVOL (vol. implícita 30d),52.99,2026-11-25,-0.09,7.29,14.43,abs,49,
+Derivativos,BTC,Funding perpétuo (% a.a.),1.97495,2026-11-25,0.172093,-11.6192,-31.1289,abs,21,normal
+Preço e sentimento,ETH,Preço (US$),1677.97,2026-11-24,-1.86736,-7.95708,-27.8541,pct,57,
+Preço e sentimento,ETH,ETH/BTC,0.0280641,2026-11-24,0.533172,-0.07906,-3.42164,pct,30,
+Valuation on-chain,ETH,MVRV,0.838013,2026-11-24,-0.012887,-0.044985,-0.196117,abs,16,abaixo do custo realizado
+Atividade,ETH,Endereços ativos (média 7d),809937,2026-11-24,-3.02802,-15.5338,-1.8655,pct,92,
+Fluxos,ETH,"Netflow exchanges, 7d (US$)",2.95756e+08,2026-11-25,-7.536e+06,7.13646e+08,6.34901e+08,abs,92,"entrada líquida (pressão vendedora, hipótese)"
+DeFi,ETH,TVL da rede (US$),3.57724e+10,2026-11-25,-1.57383,-4.49334,-21.5672,pct,55,
+DeFi,ETH,Stablecoins na rede (US$),1.2901e+11,2026-11-25,-0.33913,-2.42187,-9.89726,pct,86,
+Derivativos,ETH,DVOL (vol. implícita 30d),66.07,2026-11-25,-0.6,6.2,13.06,abs,47,
+Derivativos,ETH,Funding perpétuo (% a.a.),-8.66739,2026-11-25,0.261289,-1.54921,-10.2977,abs,17,vendedores pagam
+Preço e sentimento,SOL,Preço (US$),69.7257,2026-11-24,-3.01597,-7.07898,-31.0609,pct,45,
+Preço e sentimento,SOL,SOL/BTC,0.00116616,2026-11-24,-0.643545,0.874256,-7.71487,pct,39,
+DeFi,SOL,TVL da rede (US$),4.50475e+09,2026-11-25,-2.79504,-6.11388,-20.8137,pct,49,
+DeFi,SOL,Stablecoins na rede (US$),1.3435e+10,2026-11-25,-2.6971,-3.24718,-9.85097,pct,76,
+Preço e sentimento,LINK,Preço (US$),8.84069,2026-11-24,-1.64356,-5.08242,-22.6028,pct,50,
+Preço e sentimento,LINK,LINK/BTC,0.000147861,2026-11-24,0.762406,3.0417,3.60769,pct,30,
+Valuation on-chain,LINK,MVRV,0.787204,2026-11-24,-0.011703,-0.022793,-0.157446,abs,9,abaixo do custo realizado
+Atividade,LINK,Endereços ativos (média 7d),4407,2026-11-24,-2.26834,-12.2012,10.1003,pct,71,
+Preço e sentimento,SKY,Preço (US$),0.0409661,2026-11-25,1.35106,-28.3328,-46.2439,pct,44,
+Preço e sentimento,SKY,SKY/ETH,2.44143e-05,2026-11-25,3.28046,-25.0201,-21.6288,pct,22,
 Valuation on-chain,SKY,MVRV do MKR,1.53136,2026-03-25,0.00039,0.0004,0.13177,abs,88,faixa intermediária
-DeFi,SKY,TVL do Sky Lending (US$),2.74869e+09,2026-11-24,-2.97908,-27.4112,-50.6053,pct,25,
-Derivativos,BTC,Dominância do BTC (%),57.7553,2026-11-24,,,,abs,,snapshot do dia
-Derivativos,ETH,Dominância do ETH (%),9.88256,2026-11-24,,,,abs,,snapshot do dia
-Derivativos,BTC,Put/call OI BTC (Deribit),0.808587,2026-11-24,,,,abs,,snapshot do dia
-Derivativos,ETH,Put/call OI ETH (Deribit),0.542984,2026-11-24,,,,abs,,snapshot do dia
-Derivativos,BTC,"OI futuros BTC (Deribit, contratos)",1.5095e+09,2026-11-24,,,,abs,,snapshot do dia
+DeFi,SKY,TVL do Sky Lending (US$),2.91222e+09,2026-11-25,5.32822,-19.4496,-46.3807,pct,26,
+Derivativos,BTC,Dominância do BTC (%),57.7724,2026-11-25,,,,abs,,snapshot do dia
+Derivativos,ETH,Dominância do ETH (%),9.83157,2026-11-25,,,,abs,,snapshot do dia
+Derivativos,BTC,Put/call OI BTC (Deribit),0.809203,2026-11-25,,,,abs,,snapshot do dia
+Derivativos,ETH,Put/call OI ETH (Deribit),0.538309,2026-11-25,,,,abs,,snapshot do dia
+Derivativos,BTC,"OI futuros BTC (Deribit, contratos)",1.50718e+09,2026-11-25,,,,abs,,snapshot do dia
